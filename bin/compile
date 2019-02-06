@@ -61,7 +61,7 @@ cat > $INSTALL_DIR/policy.xml <<EOF
 <policymap>
   <policy domain="delegate" rights="none" pattern="*" />
   <policy domain="coder" rights="none" pattern="*" />
-  <policy domain="coder" rights="read | write" pattern="{GIF,JPEG,PNG,WEBP,PDF}" />
+  <policy domain="coder" rights="read | write" pattern="{GIF,JPEG,JPG,PNG,WEBP,PDF,MP4,MOV}" />
 </policymap>
 EOF
 
