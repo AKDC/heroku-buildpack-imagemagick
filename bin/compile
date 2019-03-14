@@ -21,7 +21,7 @@ if [ ! -f $CACHE_FILE ]; then
   IMAGE_MAGICK_DIR="ImageMagick-$IMAGE_MAGICK_VERSION"
   # SSL cert used on imagemagick not recognized by heroku.
 #  IMAGE_MAGICK_URL="http://www.imagemagick.org/download/releases/$IMAGE_MAGICK_FILE"
-  IMAGE_MAGICK_URL="https://github.com/ImageMagick/ImageMagick/archive/$IMAGE_MAGICK_FILE"
+  IMAGE_MAGICK_URL="https://archnet.nyc3.digitaloceanspaces.com/$IMAGE_MAGICK_FILE"
 
   echo "-----> Downloading ImageMagick from $IMAGE_MAGICK_URL"
   wget $IMAGE_MAGICK_URL -P $BUILD_DIR | indent
