@@ -1,1 +1,6 @@
 .DS_Store
+printenv
+configure.txt
+heroku-configure.txt
+newenv.sh
+oldenv.sh
