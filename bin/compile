@@ -38,7 +38,7 @@ if [ ! -f $CACHE_FILE ]; then
   cd $IMAGE_MAGICK_DIR
   export CPPFLAGS="-I$INSTALL_DIR/include"
   export LDFLAGS="-L$INSTALL_DIR/lib"
-  ./configure --prefix=$INSTALL_DIR --without-gvc --with-gslib=yes
+  ./configure --prefix=$INSTALL_DIR --includedir=${prefix}/include --libdir=${prefix}/lib/ImageMagick-7.0.8 --libexecdir=${prefix}/lib/ImageMagick-7.0.8 --disable-maintainer-mode --disable-dependency-tracking --with-modules --with-magick-plus-plus --with-gslib --without-gvc --enable-shared --without-dps --without-fpx --x-includes=/usr/include/X11 --x-libraries=/usr/lib/X11 --with-rsvg 
   make && make install
   cd ..
   rm -rf $IMAGE_MAGICK_DIR
