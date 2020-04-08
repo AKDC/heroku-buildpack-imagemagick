@@ -58,14 +58,14 @@ fi
 
 echo "-----> Writing policy file"
 mkdir -p $INSTALL_DIR/etc/ImageMagick
-#cat > $INSTALL_DIR/policy.xml <<EOF
-#<policymap>
-#  <policy domain="delegate" rights="none" pattern="*" />
-#  <policy domain="delegate" rights="read|write" pattern="gs" />
-#  <policy domain="coder" rights="none" pattern="*" />
-#  <policy domain="coder" rights="read|write" pattern="{GIF,JPEG,JPG,PNG,WEBP,PS,XPS,PDF,MP4,MOV,LABEL}" />
-#</policymap>
-#EOF
+cat > $INSTALL_DIR/policy.xml <<EOF
+<policymap>
+  <policy domain="delegate" rights="none" pattern="*" />
+  <policy domain="coder" rights="none" pattern="*" />
+  <policy domain="coder" rights="read|write" pattern="{GIF,JPEG,JPG,PNG,WEBP,PS,XPS,PDF,MP4,MOV,LABEL}" />
+  <policy domain="delegate" rights="read|write" pattern="gs" />
+</policymap>
+EOF
 
 # update PATH and LD_LIBRARY_PATH
 echo "-----> Updating environment variables"
