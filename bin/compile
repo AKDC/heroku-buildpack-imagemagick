@@ -78,7 +78,7 @@ cat > $INSTALL_DIR/log.xml <<EOF
   <log limit="2000"/>
   <log format="%t %r %u %v %d %c[%p]: %m/%f/%l/%d\n  %e"/>
 </logmap>
-EOD
+EOF
 
 echo "-----> Copying delegates.xml"
 cp $INSTALL_DIR/etc/ImageMagick-7/delegates.xml $INSTALL_DIR
