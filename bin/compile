@@ -62,7 +62,6 @@ cat > $INSTALL_DIR/policy.xml <<EOF
 <policymap>
   <policy domain="delegate" rights="none" pattern="*" />
   <policy domain="delegate" rights="all" pattern="gs" />
-  <policy domain="delegate" rights="all" pattern="mpeg:decode" />
   <policy domain="coder" rights="none" pattern="*" />
   <policy domain="coder" rights="read|write" pattern="{GIF,JPEG,JPG,PNG,WEBP,PS,XPS,PDF,MP4,MPEG,MPG,MOV,LABEL}" />
 </policymap>
@@ -79,9 +78,6 @@ cat > $INSTALL_DIR/log.xml <<EOF
   <log format="%t %r %u %v %d %c[%p]: %m/%f/%l/%d\n  %e"/>
 </logmap>
 EOF
-
-echo "-----> Copying delegates.xml"
-cp $INSTALL_DIR/etc/ImageMagick-7/delegates.xml $INSTALL_DIR
 
 # update PATH and LD_LIBRARY_PATH
 echo "-----> Updating environment variables"
